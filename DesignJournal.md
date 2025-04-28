@@ -123,6 +123,8 @@
   - I added a few things to contribute to the 'power fantasy' aspect of it. First, while charging, time slows down to half speed, to signify the character's focus. Second, the headshot will also send the enemy flying, more than if they're killed normally.
 - This move is complementary to the regular shot. While the regular shot is fast and takes multiple shots to kill an enemy, the headshot is slow (even with the slow-mo during focusing) but takes only one shot to kill an enemy. I am still thinking about whether the headshot needs more balancing.
 
+#### [Before](https://drive.google.com/file/d/1ZSFlTp7Yw50UfgSMzkcLGcqxPCJz9ofj/view?usp=sharing) & [After](https://drive.google.com/file/d/12bw7Esz8nbmBNxJS1_H_VQlrAmVfXeeD/view?usp=sharing)
+
 ## Week 10-11
 Week 10 was spring break, and our whole team/class went to GDC during week 11.
 
@@ -134,11 +136,15 @@ Week 10 was spring break, and our whole team/class went to GDC during week 11.
   - It also resulted in both our melee enemies now using the exact same behavior tree (BTT_Attack calls BP_Enemy's Attack which is overridden by each enemy type).
 ![updated behavior tree](https://github.com/user-attachments/assets/1afcc8d2-8a2e-439d-8be0-238918f7b9ad)
 
+#### [Before](https://drive.google.com/file/d/1yVVod8U0iR63k150cu9PRf2cnAkEwXIM/view?usp=sharing) & [After](https://drive.google.com/file/d/1qezXXHscYEe2lrOgRi4x-Cd7U4hJkqfW/view?usp=sharing)
+
 ## Week 14
 #### Individual
 - I focused on defensive abilities for our character this week, working on two of them.
   - First, is the decoy. The decoy is created whenever you dodge, at the spot where you dodged (also indicated by Divith's dodge VFX). It's invisible and lasts a few seconds before despawning. While present, enemies will target it instead of you.
   - Second, is the parry. For the existing block ability, if you block right before an enemy lands their attack, you will parry that attack, and they will be stunned briefly.
+
+#### Before ([Decoy](https://drive.google.com/file/d/1emkLd_TXDsgrvti4ZxASscYW4wkKJs1G/view?usp=sharing), [Parry](https://drive.google.com/file/d/1uaI7I3H2eAXq5FoPvPgIvlNhmfVoE4fn/view?usp=sharing)) & [After](https://drive.google.com/file/d/11WZkrGytk1NOFLtjKdFdm506vdRozIOb/view?usp=sharing)
 
 ## Week 15
 #### Individual
@@ -149,3 +155,7 @@ Week 10 was spring break, and our whole team/class went to GDC during week 11.
   - Put the katana enemy on the GAS system, reusing some of the player's gameplay tags. This also resulted in their attacks feeling more correct (i.e. the damage occurrs more accurately to when they're swinging their weapon) (since we're using animation notifies) compared to the previous implementation.
   - Enemies will now detect you if you damage them.
   - Added a few mini-levels to the main level, each with different positionings and combinations of enemies.
+
+#### Before ([Flamethrower](https://drive.google.com/file/d/135klBtcEm1WryUIAXwZYaGBU4hmUqxCD/view?usp=sharing), [Katana](https://drive.google.com/file/d/1PJ5m5QRwPRUQBjZTrPhHQizGTLiaF7RZ/view?usp=sharing), [Shield](https://drive.google.com/file/d/1SZubx6qKRzJsh3O7M9W4nWf0GFpaY_BG/view?usp=sharing))
+#### After (General, Flamethrower)
+[![wk15 after](https://img.youtube.com/vi/T05F3lYViWo/0.jpg)](https://www.youtube.com/watch?v=T05F3lYViWo) [![wk15 after flamethrower](https://img.youtube.com/vi/p-eJ7ZnOY-A/0.jpg)](https://www.youtube.com/watch?v=p-eJ7ZnOY-A)
