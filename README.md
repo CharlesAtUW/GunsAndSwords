@@ -1,5 +1,12 @@
 # GunsAndSwords
+- January-April 2025
+- Unreal Engine 5
+- Team of 4
+
+A combat design prototype where the player uses a pistol and a katana together to fend off multiple enemies at once. Inspired by the combat scenes in the *John Wick* movies.
+
 # Design Journal
+This is a week-by-week log of the progress our team made on this project.
 
 ## Week 1
 #### Team
