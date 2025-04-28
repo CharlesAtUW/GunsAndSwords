@@ -113,3 +113,39 @@
 
 #### Before & After
 [![wk7 before](https://img.youtube.com/vi/xjSjcvXqLaI/0.jpg)](https://www.youtube.com/watch?v=xjSjcvXqLaI) [![wk7 after](https://img.youtube.com/vi/oKti-zKPfQ4/0.jpg)](https://www.youtube.com/watch?v=oKti-zKPfQ4)
+
+## Week 9
+#### Individual
+- This week, I implemented another move to our character's ranged moveset, the headshot.
+  - To perform it, hold the shoot input (left click) while aiming at an enemy.
+  - After some time, focus for the headshot will charge up (as shown by the crosshair closing in on the enemy and the camera zooming in).
+  - Once fully charged (green crosshair), you can release the shoot input to perform it. (If released before fully charged, it will just do a normal shot.)
+  - I added a few things to contribute to the 'power fantasy' aspect of it. First, while charging, time slows down to half speed, to signify the character's focus. Second, the headshot will also send the enemy flying, more than if they're killed normally.
+- This move is complementary to the regular shot. While the regular shot is fast and takes multiple shots to kill an enemy, the headshot is slow (even with the slow-mo during focusing) but takes only one shot to kill an enemy. I am still thinking about whether the headshot needs more balancing.
+
+## Week 10-11
+Week 10 was spring break, and our whole team/class went to GDC during week 11.
+
+## Week 12
+#### Individual
+- I noticed a lot of duplicated code between our different enemy classes.
+  - To combat this, I factored out a lot of the common behavior between these classes into one superclass, BP_Enemy. This superclass handles detecting the player/their decoy, as well as what happens when taking damage (a lot of things, such as stun, knockback, and dying)
+  - Doing this also had the effect (which was intended) of making the melee enemies now shootable, and the ranged enemy now melee-able, when they previously weren't.
+  - It also resulted in both our melee enemies now using the exact same behavior tree (BTT_Attack calls BP_Enemy's Attack which is overridden by each enemy type).
+![updated behavior tree](https://github.com/user-attachments/assets/1afcc8d2-8a2e-439d-8be0-238918f7b9ad)
+
+## Week 14
+#### Individual
+- I focused on defensive abilities for our character this week, working on two of them.
+  - First, is the decoy. The decoy is created whenever you dodge, at the spot where you dodged (also indicated by Divith's dodge VFX). It's invisible and lasts a few seconds before despawning. While present, enemies will target it instead of you.
+  - Second, is the parry. For the existing block ability, if you block right before an enemy lands their attack, you will parry that attack, and they will be stunned briefly.
+
+## Week 15
+#### Individual
+- This week I worked on a lot of things in preparation for the final assignment for the class:
+  - Added some additional player feedback/polish, such as shield particles, blood particles, melee slash sound, and shield hitting sound.
+  - Reworked the flamethrower enemy to differentiate it more from the katana enemy. Instead of doing a lot of damage at once, it now does a little damage per frame (as if it's 'burning' the player with their flamethrower).
+  - Finished the implementation of blocking for the melee and ranged enemies. They will block if all three apply: you're far away enough from them, you're aiming your gun, and you're looking in their general direction. When blocking, they will put their shield up and face you, and attacks will have no effect on them.
+  - Put the katana enemy on the GAS system, reusing some of the player's gameplay tags. This also resulted in their attacks feeling more correct (i.e. the damage occurrs more accurately to when they're swinging their weapon) (since we're using animation notifies) compared to the previous implementation.
+  - Enemies will now detect you if you damage them.
+  - Added a few mini-levels to the main level, each with different positionings and combinations of enemies.
