@@ -6,7 +6,7 @@
 A combat design prototype where the player uses a pistol and a katana together to fend off multiple enemies at once. Inspired by the combat scenes in the *John Wick* movies.
 
 # Design Journal
-This is a week-by-week log of the progress our team made on this project.
+This is a week-by-week log of the progress our team made on this project. Some weeks have "before and after" sections with videos showing the game before and after the changes.
 
 ## Week 1
 #### Team
@@ -84,8 +84,11 @@ This is a week-by-week log of the progress our team made on this project.
   - Multiple people didn't like that the camera locked while aiming the gun, so I made it so that the camera moves where you aim. Still WIP--I'd still like to somehow incorporate the aim offset poses that I worked on in a previous week.
   - Someone noticed that the interaction between the melee system and gun system were causing a number of janky bugs. So I went in and cleaned up the interaction, so that you can't aim/shoot while performing a melee attack.
 
-#### Before & After
-[![wk6 before](https://img.youtube.com/vi/1gZ5M0ZfDz4/0.jpg)](https://www.youtube.com/watch?v=1gZ5M0ZfDz4) [![wk6 after](https://img.youtube.com/vi/oQY5pofTEJw/0.jpg)](https://www.youtube.com/watch?v=oQY5pofTEJw)
+#### Before
+[![wk6 before](https://img.youtube.com/vi/1gZ5M0ZfDz4/0.jpg)](https://www.youtube.com/watch?v=1gZ5M0ZfDz4)
+
+#### After
+[![wk6 after](https://img.youtube.com/vi/oQY5pofTEJw/0.jpg)](https://www.youtube.com/watch?v=oQY5pofTEJw)
 
 ## Week 7
 #### Team
@@ -103,8 +106,11 @@ This is a week-by-week log of the progress our team made on this project.
   - Once they finish that and don't see the player for some time, they will start wandering again.
 ![enemy behavior tree](https://github.com/user-attachments/assets/6edb44c4-4d30-4235-a575-b9c65f485c1a)
 
-#### Before & After
-[![wk7 before](https://img.youtube.com/vi/jCXWEZuZM6M/0.jpg)](https://www.youtube.com/watch?v=jCXWEZuZM6M) [![wk7 after](https://img.youtube.com/vi/1r4ix1vUmls/0.jpg)](https://www.youtube.com/watch?v=1r4ix1vUmls)
+#### Before
+[![wk7 before](https://img.youtube.com/vi/jCXWEZuZM6M/0.jpg)](https://www.youtube.com/watch?v=jCXWEZuZM6M)
+
+#### After
+[![wk7 after](https://img.youtube.com/vi/1r4ix1vUmls/0.jpg)](https://www.youtube.com/watch?v=1r4ix1vUmls)
 
 ## Week 8
 #### Team
@@ -119,8 +125,11 @@ This is a week-by-week log of the progress our team made on this project.
   - Additionally, there is now "Low Ammo" text at the center of the screen when there is both low magazine ammo and zero reserve ammo (ammo that isn't in the gun (to the right of the "/")), and there is "No Ammo" text when completely out of ammo.
   - The reload animation is WIP -- I couldn't find a proper pistol reload animation on Mixamo (it's a rifle reload animation), so I would need to find a better solution. But right now it's close enough.
 
-#### Before & After
-[![wk7 before](https://img.youtube.com/vi/xjSjcvXqLaI/0.jpg)](https://www.youtube.com/watch?v=xjSjcvXqLaI) [![wk7 after](https://img.youtube.com/vi/oKti-zKPfQ4/0.jpg)](https://www.youtube.com/watch?v=oKti-zKPfQ4)
+#### Before
+[![wk7 before](https://img.youtube.com/vi/xjSjcvXqLaI/0.jpg)](https://www.youtube.com/watch?v=xjSjcvXqLaI)
+
+#### After
+[![wk7 after](https://img.youtube.com/vi/oKti-zKPfQ4/0.jpg)](https://www.youtube.com/watch?v=oKti-zKPfQ4)
 
 ## Week 9
 #### Individual
@@ -131,7 +140,10 @@ This is a week-by-week log of the progress our team made on this project.
   - I added a few things to contribute to the 'power fantasy' aspect of it. First, while charging, time slows down to half speed, to signify the character's focus. Second, the headshot will also send the enemy flying, more than if they're killed normally.
 - This move is complementary to the regular shot. While the regular shot is fast and takes multiple shots to kill an enemy, the headshot is slow (even with the slow-mo during focusing) but takes only one shot to kill an enemy. I am still thinking about whether the headshot needs more balancing.
 
-#### [Before](https://drive.google.com/file/d/1ZSFlTp7Yw50UfgSMzkcLGcqxPCJz9ofj/view?usp=sharing) & [After](https://drive.google.com/file/d/12bw7Esz8nbmBNxJS1_H_VQlrAmVfXeeD/view?usp=sharing)
+#### Before
+[![wk9 before](https://img.youtube.com/vi/9VYYWyUK9EI/0.jpg)](https://www.youtube.com/watch?v=9VYYWyUK9EI)
+#### After
+[![wk9 after](https://img.youtube.com/vi/z8OctTdg6Pk/0.jpg)](https://www.youtube.com/watch?v=z8OctTdg6Pk)
 
 ## Week 10-11
 Week 10 was spring break, and our whole team/class went to GDC during week 11.
@@ -144,7 +156,10 @@ Week 10 was spring break, and our whole team/class went to GDC during week 11.
   - It also resulted in both our melee enemies now using the exact same behavior tree (BTT_Attack calls BP_Enemy's Attack which is overridden by each enemy type).
 ![updated behavior tree](https://github.com/user-attachments/assets/1afcc8d2-8a2e-439d-8be0-238918f7b9ad)
 
-#### [Before](https://drive.google.com/file/d/1yVVod8U0iR63k150cu9PRf2cnAkEwXIM/view?usp=sharing) & [After](https://drive.google.com/file/d/1qezXXHscYEe2lrOgRi4x-Cd7U4hJkqfW/view?usp=sharing)
+#### Before
+[![wk12 before](https://img.youtube.com/vi/mfefbCF5_GQ/0.jpg)](https://www.youtube.com/watch?v=mfefbCF5_GQ)
+#### After
+[![wk12 after](https://img.youtube.com/vi/6OQHt5Mc9CM/0.jpg)](https://www.youtube.com/watch?v=6OQHt5Mc9CM)
 
 ## Week 14
 #### Individual
@@ -152,7 +167,12 @@ Week 10 was spring break, and our whole team/class went to GDC during week 11.
   - First, is the decoy. The decoy is created whenever you dodge, at the spot where you dodged (also indicated by Divith's dodge VFX). It's invisible and lasts a few seconds before despawning. While present, enemies will target it instead of you.
   - Second, is the parry. For the existing block ability, if you block right before an enemy lands their attack, you will parry that attack, and they will be stunned briefly.
 
-#### Before ([Decoy](https://drive.google.com/file/d/1emkLd_TXDsgrvti4ZxASscYW4wkKJs1G/view?usp=sharing), [Parry](https://drive.google.com/file/d/1uaI7I3H2eAXq5FoPvPgIvlNhmfVoE4fn/view?usp=sharing)) & [After](https://drive.google.com/file/d/11WZkrGytk1NOFLtjKdFdm506vdRozIOb/view?usp=sharing)
+#### Before (Decoy, Parry)
+[![wk14 before decoy](https://img.youtube.com/vi/kW2s_RMkVt4/0.jpg)](https://www.youtube.com/watch?v=kW2s_RMkVt4)
+[![wk14 before parry](https://img.youtube.com/vi/aJdIvIl3Mco/0.jpg)](https://www.youtube.com/watch?v=aJdIvIl3Mco)
+
+#### After
+[![wk14 after](https://img.youtube.com/vi/8zCrNrO9yOQ/0.jpg)](https://www.youtube.com/watch?v=8zCrNrO9yOQ)
 
 ## Week 15
 #### Individual
@@ -164,6 +184,10 @@ Week 10 was spring break, and our whole team/class went to GDC during week 11.
   - Enemies will now detect you if you damage them.
   - Added a few mini-levels to the main level, each with different positionings and combinations of enemies.
 
-#### Before ([Flamethrower](https://drive.google.com/file/d/135klBtcEm1WryUIAXwZYaGBU4hmUqxCD/view?usp=sharing), [Katana](https://drive.google.com/file/d/1PJ5m5QRwPRUQBjZTrPhHQizGTLiaF7RZ/view?usp=sharing), [Shield](https://drive.google.com/file/d/1SZubx6qKRzJsh3O7M9W4nWf0GFpaY_BG/view?usp=sharing))
+#### Before (Katana, Shield, Flamethrower)
+[![wk15 before katana](https://img.youtube.com/vi/25QEzvNI08U/0.jpg)](https://www.youtube.com/watch?v=25QEzvNI08U)
+[![wk15 before shield](https://img.youtube.com/vi/W_W-2xkOhs0/0.jpg)](https://www.youtube.com/watch?v=W_W-2xkOhs0)
+[![wk15 before flamethrower](https://img.youtube.com/vi/nvA2LDhqJbI/0.jpg)](https://www.youtube.com/watch?v=nvA2LDhqJbI)
 #### After (General, Flamethrower)
-[![wk15 after](https://img.youtube.com/vi/T05F3lYViWo/0.jpg)](https://www.youtube.com/watch?v=T05F3lYViWo) [![wk15 after flamethrower](https://img.youtube.com/vi/p-eJ7ZnOY-A/0.jpg)](https://www.youtube.com/watch?v=p-eJ7ZnOY-A)
+[![wk15 after](https://img.youtube.com/vi/T05F3lYViWo/0.jpg)](https://www.youtube.com/watch?v=T05F3lYViWo)
+[![wk15 after flamethrower](https://img.youtube.com/vi/p-eJ7ZnOY-A/0.jpg)](https://www.youtube.com/watch?v=p-eJ7ZnOY-A)
