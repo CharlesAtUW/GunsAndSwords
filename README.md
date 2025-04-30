@@ -1,14 +1,41 @@
 # GunsAndSwords
 - January-April 2025
 - Unreal Engine 5
+  - Gameplay Ability System (GAS)
 - Team of 4
 
 A combat design prototype where the player uses a pistol and a katana together to fend off multiple enemies at once. Inspired by the combat scenes in the *John Wick* movies.
 
-# Design Journal
-This is a week-by-week log of the progress our team made on this project. Some weeks have "before and after" sections with videos showing the game before and after the changes.
+[![final](https://img.youtube.com/vi/yxDsvH_Kmvg/0.jpg)](https://www.youtube.com/watch?v=yxDsvH_Kmvg)
 
-## Week 1
+### Controls
+- WASD - Movement
+- Space - Jump
+- Melee:
+  - Left Click - Melee Attack
+  - Left Click (right after attacking) - Combo Melee Attack
+  - Left Click (hold) - Heavy Melee Attack
+  - Left Click (while in air) - Air Melee Attack
+  - U (while charged) - Ultimate
+- Ranged:
+  - Right Click - Aim
+  - Left Click (while aiming) - Shoot
+  - Left Click (hold, while aiming) - Headshot
+  - R - Reload
+- Defense:
+  - E - Block
+  - E (right before enemy lands attack) - Parry
+  - Left Ctrl - Dodge (stepback)
+- Misc:
+  - Caps Lock - Crouch
+  - H - Add Health
+  - G - Remove Health
+  - 1 - Skip to Main Levels
+
+# Design Journal
+This is a week-by-week log of the progress our team made on this project. Some weeks have "before and after" sections with videos showing the game before and after my changes.
+
+## Setup (Week 1)
 #### Team
 - Set up Perforce depot and workspace and set up Unreal project
 - Found an avatar on Mixamo that we wanted to use
@@ -17,7 +44,7 @@ This is a week-by-week log of the progress our team made on this project. Some w
 #### Individual
 - Helped set up Perforce workspace and Unreal project
 
-## Week 2
+## Collision Response, Avatar State (Week 2)
 #### Team
 - For this week, we met and decided what we wanted to get done this week. Then, Yoyo split us off to complete the tasks individually, since the tasks this week were more independent.
   - Divith got the character to hold a gun in one hand and a blade in the other, and also got the character to move slower when their health is low.
@@ -27,7 +54,7 @@ This is a week-by-week log of the progress our team made on this project. Some w
 - I implemented a "breaking-glass" mechanic. Currently, there is glass that will shatter into many pieces when the player runs into it.
 - I fleshed out the ideas surrounding our combat design, of the character having a gun in one hand and a blade in the other. In particular, how to balance around the fact that the gun has range and the blade doesn't. I also wanted to design it in a way where the gun and the blade are used in tandem, rather than the blade being a "backup" weapon. I wrote about it and what I wanted to do for the design, but we still need to go over and refine the ideas.
 
-## Week 3
+## Character Moves (Week 3)
 #### Team
 - For this week, our team split up and worked on the different moves of our character, who we plan to have both melee and ranged moves (pistol + katana) in their moveset.
   - Divith and Yoyo worked on melee, adding a sword swing and a combo attack
@@ -39,7 +66,7 @@ This is a week-by-week log of the progress our team made on this project. Some w
 - Edited the animation state machine to go between the default animations and these animations
 ![animation state machine](https://github.com/user-attachments/assets/de4d37de-a391-4f5f-b868-e4e6331310e9)
 
-## Week 4
+## More Character Moves (Week 4)
 #### Team
 - Again, we split up to work on the different moves in our character's moveset.
   - Divith and Yoyo worked on melee attacks, with Divith adding a combo attack (different melee attacks occurring when doing them one after the other), and Yoyo adding a jump attack.
@@ -54,7 +81,7 @@ This is a week-by-week log of the progress our team made on this project. Some w
 #### Video
 [![wk4](https://img.youtube.com/vi/XaI4cpIyaTo/0.jpg)](https://www.youtube.com/watch?v=XaI4cpIyaTo)
 
-## Week 5
+## Polish (Week 5)
 #### Team
 - This week, we focused on adding polish/effects to our game mechanics, to make them feel juicier.
   - I worked on various polishes for the shooting system.
@@ -70,7 +97,7 @@ This is a week-by-week log of the progress our team made on this project. Some w
   - Shoot input buffering - the pistol has a cooldown, so the player can't just rapid-fire super fast. But, it would feel unresponsive if they inputted a shot right before the cooldown finished, and the character didn't shoot when they expected one. So, if they do that, we remember the input, and then shoot immediately once the cooldown ends.
 
 
-## Week 6
+## Playtesting (Week 6)
 #### Team
 - This week, our team playtested our project with a few people, and made changes to the game based on the feedback.
   - We got feedback that the camera lock while aiming didn’t feel good, so I worked on having the aiming no longer lock the camera.
@@ -90,7 +117,7 @@ This is a week-by-week log of the progress our team made on this project. Some w
 #### After
 [![wk6 after](https://img.youtube.com/vi/oQY5pofTEJw/0.jpg)](https://www.youtube.com/watch?v=oQY5pofTEJw)
 
-## Week 7
+## Enemies (Week 7)
 #### Team
 - This week, we focused on making enemies for the player to fight. We decided on two enemies to make, then split off.
   - Yoyo and Divith worked on an enemy with close-ranged attacks.
@@ -112,7 +139,7 @@ This is a week-by-week log of the progress our team made on this project. Some w
 #### After
 [![wk7 after](https://img.youtube.com/vi/1r4ix1vUmls/0.jpg)](https://www.youtube.com/watch?v=1r4ix1vUmls)
 
-## Week 8
+## UI (Week 8)
 #### Team
 - This week, we focused on adding relevant elements to the game’s user interface. We met up to decide on what UI elements to make, and then mostly split off to do them.
   - Ray made an enemy direction indicator.
@@ -131,7 +158,7 @@ This is a week-by-week log of the progress our team made on this project. Some w
 #### After
 [![wk7 after](https://img.youtube.com/vi/oKti-zKPfQ4/0.jpg)](https://www.youtube.com/watch?v=oKti-zKPfQ4)
 
-## Week 9
+## More Character Moves ("Mastery Opportunity", "Power Fantasy") (Week 9)
 #### Individual
 - This week, I implemented another move to our character's ranged moveset, the headshot.
   - To perform it, hold the shoot input (left click) while aiming at an enemy.
@@ -148,7 +175,7 @@ This is a week-by-week log of the progress our team made on this project. Some w
 ## Week 10-11
 Week 10 was spring break, and our whole team/class went to GDC during week 11.
 
-## Week 12
+## Catch-Up (Week 12)
 #### Individual
 - I noticed a lot of duplicated code between our different enemy classes.
   - To combat this, I factored out a lot of the common behavior between these classes into one superclass, BP_Enemy. This superclass handles detecting the player/their decoy, as well as what happens when taking damage (a lot of things, such as stun, knockback, and dying)
@@ -161,7 +188,7 @@ Week 10 was spring break, and our whole team/class went to GDC during week 11.
 #### After
 [![wk12 after](https://img.youtube.com/vi/6OQHt5Mc9CM/0.jpg)](https://www.youtube.com/watch?v=6OQHt5Mc9CM)
 
-## Week 14
+## More Abilities (Week 14)
 #### Individual
 - I focused on defensive abilities for our character this week, working on two of them.
   - First, is the decoy. The decoy is created whenever you dodge, at the spot where you dodged (also indicated by Divith's dodge VFX). It's invisible and lasts a few seconds before despawning. While present, enemies will target it instead of you.
@@ -174,7 +201,7 @@ Week 10 was spring break, and our whole team/class went to GDC during week 11.
 #### After
 [![wk14 after](https://img.youtube.com/vi/8zCrNrO9yOQ/0.jpg)](https://www.youtube.com/watch?v=8zCrNrO9yOQ)
 
-## Week 15
+## Finals (Week 15)
 #### Individual
 - This week I worked on a lot of things in preparation for the final assignment for the class:
   - Added some additional player feedback/polish, such as shield particles, blood particles, melee slash sound, and shield hitting sound.
