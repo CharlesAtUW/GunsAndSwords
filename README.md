@@ -4,7 +4,7 @@
   - Gameplay Ability System (GAS)
 - Team of 4
 
-A combat design prototype where the player uses a pistol and a katana together to fend off multiple enemies at once. Inspired by the combat scenes in the *John Wick* movies.
+A combat design prototype where the player uses a pistol and a katana together in tandem to fend off multiple enemies at once. Both weapons serve not only as damage-dealers but also as tactical tools to stun enemies and isolate them. Inspired by the combat scenes in the *John Wick* movies.
 
 [![final](https://img.youtube.com/vi/yxDsvH_Kmvg/0.jpg)](https://www.youtube.com/watch?v=yxDsvH_Kmvg)
 
@@ -159,6 +159,10 @@ This is a week-by-week log of the progress our team made on this project. Some w
 [![wk7 after](https://img.youtube.com/vi/oKti-zKPfQ4/0.jpg)](https://www.youtube.com/watch?v=oKti-zKPfQ4)
 
 ## More Character Moves ("Mastery Opportunity", "Power Fantasy") (Week 9)
+#### Team
+- We worked on adding feelings of power to our combat system, specifically adding mastery opportunities (opportunities for the player to exhibit skillful play and be rewarded for it) and power fantasies (opportunities for the player for expression and dominance with little effort)
+  - The player can now perform a headshot while aiming. This adds a power fantasy of going slow-mo and one-shotting enemies.
+  - The katana enemy will sometimes perform the jump attack (the same as the player's), which will do more damage than their normal attacks. But they will be vulnerable (can die in one hit) if they take damage when winding up this attack. This adds a mastery opportunity of hitting the enemy at the right time.
 #### Individual
 - This week, I implemented another move to our character's ranged moveset, the headshot.
   - To perform it, hold the shoot input (left click) while aiming at an enemy.
@@ -176,9 +180,14 @@ This is a week-by-week log of the progress our team made on this project. Some w
 Week 10 was spring break, and our whole team/class went to GDC during week 11.
 
 ## Catch-Up (Week 12)
+#### Team
+- Since we didn't fully finish the power fantasy and mastery opportunities last time, we spent this week catching up and finishing them, as well as making general fixes in the project.
+  - Divith worked on finishing the ultimate attack. For that attack, the player charges up and does a kick that sends the enemy flying. This is another power fantasy opportunity for the player.
+  - When an enemy is hit, they now play a hit-back animation and are stunned momentarily. This is both another power fantasy (stunlock an enemy) and mastery opportunity (fend off multiple enemies via stunning them) for the player.
+  - Divith and Yoyo made fixes to the melee enemy AI.
 #### Individual
 - I noticed a lot of duplicated code between our different enemy classes.
-  - To combat this, I factored out a lot of the common behavior between these classes into one superclass, BP_Enemy. This superclass handles detecting the player/their decoy, as well as what happens when taking damage (a lot of things, such as stun, knockback, and dying)
+  - To address this, I factored out a lot of the common behavior between these classes into one superclass, BP_Enemy. This superclass handles detecting the player/their decoy, as well as what happens when taking damage (a lot of things, such as stun, knockback, and dying)
   - Doing this also had the effect (which was intended) of making the melee enemies now shootable, and the ranged enemy now melee-able, when they previously weren't.
   - It also resulted in both our melee enemies now using the exact same behavior tree (BTT_Attack calls BP_Enemy's Attack which is overridden by each enemy type).
 ![updated behavior tree](https://github.com/user-attachments/assets/1afcc8d2-8a2e-439d-8be0-238918f7b9ad)
@@ -189,10 +198,15 @@ Week 10 was spring break, and our whole team/class went to GDC during week 11.
 [![wk12 after](https://img.youtube.com/vi/6OQHt5Mc9CM/0.jpg)](https://www.youtube.com/watch?v=6OQHt5Mc9CM)
 
 ## More Abilities (Week 14)
+#### Team
+- Ray and Yoyo worked on making a level, where the player can try out the different combat abilities on the enemies.
+- Divith added a particle effect to the player's dodge ability and ultimate ability. For the dodge, the particles form where the player once was. For the ultimate, the particles follow the ultimate's target's movement as they're sent flying.
+- Divith also made some bugfixes.
+- Yoyo started working on making the melee enemies have shields, that they will hold up when at longer ranges from the player. This is so that they can't get shot from afar.
 #### Individual
 - I focused on defensive abilities for our character this week, working on two of them.
   - First, is the decoy. The decoy is created whenever you dodge, at the spot where you dodged (also indicated by Divith's dodge VFX). It's invisible and lasts a few seconds before despawning. While present, enemies will target it instead of you.
-  - Second, is the parry. For the existing block ability, if you block right before an enemy lands their attack, you will parry that attack, and they will be stunned briefly.
+  - Second, is the parry. For the existing block ability, if you block right before an enemy lands their attack, you will parry that attack, and they will be stunned briefly. This is also another mastery opportunity for the player.
 
 #### Before (Decoy, Parry)
 [![wk14 before decoy](https://img.youtube.com/vi/kW2s_RMkVt4/0.jpg)](https://www.youtube.com/watch?v=kW2s_RMkVt4)
@@ -209,7 +223,7 @@ Week 10 was spring break, and our whole team/class went to GDC during week 11.
   - Finished the implementation of blocking for the melee and ranged enemies. They will block if all three apply: you're far away enough from them, you're aiming your gun, and you're looking in their general direction. When blocking, they will put their shield up and face you, and attacks will have no effect on them.
   - Put the katana enemy on the GAS system, reusing some of the player's gameplay tags. This also resulted in their attacks feeling more correct (i.e. the damage occurrs more accurately to when they're swinging their weapon) (since we're using animation notifies) compared to the previous implementation.
   - Enemies will now detect you if you damage them.
-  - Added a few mini-levels to the main level, each with different positionings and combinations of enemies.
+  - Added a few mini-levels to the main level, each with different positionings and combinations of enemies. These are after the original level, so that the player can try integrating the abilities together in combat scenarios that are more involved, after they had some time to get familiar with them.
 
 #### Before (Katana, Shield, Flamethrower)
 [![wk15 before katana](https://img.youtube.com/vi/25QEzvNI08U/0.jpg)](https://www.youtube.com/watch?v=25QEzvNI08U)
