@@ -216,6 +216,13 @@ Week 10 was spring break, and our whole team/class went to GDC during week 11.
 [![wk14 after](https://img.youtube.com/vi/8zCrNrO9yOQ/0.jpg)](https://www.youtube.com/watch?v=8zCrNrO9yOQ)
 
 ## Finals (Week 15)
+#### Team
+- Divith:
+  - Made the ultimate ability be unlocked after the player gets four kills, giving the player a sense of progression.
+  - Modeled the riot shield that the enemies will hold up when blocking.
+  - Added invincibility for the player when performing the ultimate attack.
+  - Made a build for the game and the final video demonstrating the game.
+- Ray added some VFX to the sword swings.
 #### Individual
 - This week I worked on a lot of things in preparation for the final assignment for the class:
   - Added some additional player feedback/polish, such as shield particles, blood particles, melee slash sound, and shield hitting sound.
